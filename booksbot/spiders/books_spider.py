@@ -15,4 +15,6 @@ class BooksSpider(scrapy.Spider):
                 "image_url": response.urljoin(book.css("img.thumbnail::attr(src)").get()),
                 "detail_url": response.urljoin(book.css("h3 a::attr(href)").get())
             }
-        yield from response.follow_all(css='ul.pager a', callback=self.parse)
+        next_page = response.css('li.next a::attr(href)').get()
+        if next_page is not None:
+            yield response.follow(next_page, callback=self.parse)
