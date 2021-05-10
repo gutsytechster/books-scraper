@@ -13,7 +13,9 @@ class BooksSpider(scrapy.Spider):
                 "image_url": response.urljoin(
                     book.css("img.thumbnail::attr(src)").get()
                 ),
-                "detail_url": response.urljoin(book.css("h3 a::attr(href)").get()),
+                "detail_url": response.urljoin(
+                    book.css("h3 a::attr(href)").get()
+                ),
             }
         next_page = response.css("li.next a::attr(href)").get()
         if next_page is not None:
