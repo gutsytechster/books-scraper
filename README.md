@@ -1,4 +1,7 @@
 # Books Scraper
+
+[![Coverage Status](https://coveralls.io/repos/github/gutsytechster/books-scraper/badge.svg?branch=main)](https://coveralls.io/github/gutsytechster/books-scraper?branch=main) [![Build Status](https://travis-ci.org/gutsytechster/books-scraper.svg?branch=main)](https://travis-ci.org/gutsytechster/books-scraper)
+
 A book spider to scrape books from [books.toscrape.com](https://books.toscrape.com)
 
 ## Setup
