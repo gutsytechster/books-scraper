@@ -19,10 +19,22 @@ A book spider to scrape books from [books.toscrape.com](https://books.toscrape.c
     ```
     (scraper-env)$ scrapy crawl books
     ```
-    If you want to save the output to a file, use `-o` option
+    If you want to save the output to a file, use `-O` option
     ```
-    (scraper-env)$ scrapy crawl books -o books.json
+    (scraper-env)$ scrapy crawl books -O books.json
     ```
+
+## Tests
+
+The project uses [Scrapy Autounit](https://github.com/scrapinghub/scrapy-autounit/) to test the spiders. To execute the test, run the below command
+```
+(scraper-env)$ python -m unittest discover autounit/tests/
+```
+It also uses [coverage](https://github.com/nedbat/coveragepy) to identify the code coverage. To get coverage details, run the below commands
+```
+(scraper-env)$ coverage run -m unittest discover autounit/tests/
+(scraper-env)$ coverage report
+```
 
 ## Deployment
 
@@ -50,5 +62,5 @@ The spider can be deployed to zyte cloud using `shub`.
     - Book author
     - Book image URL
     - Book detail page URL
-- The data is kept in JSON format using the command above in [`books.json`](https://github.com/gutsytechster/books-scraper/blob/main/books.json) file.
+- The data has been kept in JSON format using the command above in [`books.json`](https://github.com/gutsytechster/books-scraper/blob/main/books.json) file.
 - The spider is deployed on zyte cloud and can be accessed via following URL - https://app.zyte.com/p/524436/
