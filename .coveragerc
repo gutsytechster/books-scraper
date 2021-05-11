@@ -1,0 +1,5 @@
+[run]
+source = booksbot/
+
+[report]
+show_missing = true

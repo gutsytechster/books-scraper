@@ -14,3 +14,10 @@ NEWSPIDER_MODULE = "booksbot.spiders"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
+
+SPIDER_MIDDLEWARES = {
+    "scrapy_autounit.AutounitMiddleware": 950,
+}
+
+# Enable this whenever updating tests for the spider
+AUTOUNIT_ENABLED = False
